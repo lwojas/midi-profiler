@@ -35,12 +35,12 @@ Per the ticket, two constraints hold across both stages:
   invented handshakes"); here it governs what gets generated in the first
   place.
 
-This ticket is **not** ECS-45 ("profile confidence/provenance model"):
-ECS-45 is a sibling depending on the same evidence model, not a dependency
-of this one, and its job — linking individual profile *fields* to the
-evidence and confidence behind each — is explicitly out of scope here. This
-pipeline cites evidence only at the whole-profile level (`evidenceIds`), not
-per field.
+This ticket is **not** [`docs/provenance-model.md`](./provenance-model.md)
+(ECS-45, "profile confidence/provenance model"): ECS-45 is a sibling
+depending on the same evidence model, not a dependency of this one, and its
+job — linking individual profile *fields* to the evidence and confidence
+behind each — is explicitly out of scope here. This pipeline cites evidence
+only at the whole-profile level (`evidenceIds`), not per field.
 
 ## `GeneratedDeviceProfile`
 
@@ -130,8 +130,9 @@ backs the rest of the document.
   ticket's own "AI... must never be a runtime dependency." This module starts
   from facts someone has already resolved.
 - **No per-field confidence or provenance** — `evidenceIds` is whole-profile,
-  not per-field. That finer-grained linking is ECS-45's job, a sibling of
-  this ticket, not a dependency either way.
+  not per-field. That finer-grained linking is
+  [`docs/provenance-model.md`](./provenance-model.md)'s job (ECS-45), a
+  sibling of this ticket, not a dependency either way.
 - **No CLI or tooling surface** — ECS-46 ("Build MIDI Profiler CLI/tooling")
   is what will actually drive these functions end to end against real
   research and midi-core's real validator. This ticket only defines the

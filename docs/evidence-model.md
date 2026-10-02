@@ -19,8 +19,9 @@ Per the ticket, this keeps research inputs **separate from runtime
 behavior**: `Evidence` has no notion of a live device, a MIDI port, or a
 `DeviceProfile`'s actual field values — it only describes *material
 someone gathered*. Turning evidence into an authored profile, with some
-confidence per field, is later, separate work (ECS-45, "profile
-confidence/provenance model" — blocked on this ticket existing first).
+confidence per field, is separate work: see
+[`docs/provenance-model.md`](./provenance-model.md) (ECS-45, "profile
+confidence/provenance model").
 `midi-core`'s schema is a *dependency* in the sense that `DeviceReference`
 below is deliberately shaped to line up with it, not in the sense of an
 actual code dependency — this repo imports nothing from `midi-core`.
@@ -95,8 +96,8 @@ research file breaks the test suite instead of silently going stale.
   description of it, not an extraction pipeline.
 - **No confidence or provenance linking to specific profile fields** — an
   `Evidence` record doesn't say "this supports `DeviceProfile.controls[3]`
-  with high confidence." That's ECS-45's job, which depends on `Evidence`
-  existing first.
+  with high confidence." See [`docs/provenance-model.md`](./provenance-model.md)
+  (ECS-45), which depends on `Evidence` existing here first.
 - **No deterministic generation** — nothing here turns `Evidence` into a
   `DeviceProfile`. That's ECS-44 ("deterministic profile generation
   pipeline"), also blocked on this ticket.

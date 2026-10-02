@@ -31,6 +31,14 @@ an injected validator before anything may treat it as real — deterministic
 by construction, with no AI or inference inside either step. See
 [`docs/generation-pipeline.md`](docs/generation-pipeline.md).
 
+## Confidence & provenance
+
+[`src/provenance/`](src/provenance) links an individual profile field to
+how confident its value is and the evidence that backs it — manufacturer-
+documented, DAW-discovered, inferred, experimentally verified, or honestly
+unknown, so a proprietary, undocumented handshake can be represented as
+such instead of invented. See [`docs/provenance-model.md`](docs/provenance-model.md).
+
 ## Research materials
 
 Raw research material — manufacturer PDFs, reference links — lives under

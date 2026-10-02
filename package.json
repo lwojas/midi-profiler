@@ -21,6 +21,10 @@
     "./generation": {
       "types": "./dist/generation/index.d.ts",
       "import": "./dist/generation/index.js"
+    },
+    "./provenance": {
+      "types": "./dist/provenance/index.d.ts",
+      "import": "./dist/provenance/index.js"
     }
   },
   "scripts": {
