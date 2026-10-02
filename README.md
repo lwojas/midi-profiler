@@ -23,6 +23,14 @@ const launchpadDocs = EVIDENCE.filter((e) => e.device?.model === "Launchpad Mini
 See [`docs/evidence-model.md`](docs/evidence-model.md) for the full
 `Evidence` shape and the reasoning behind it.
 
+## Generation pipeline
+
+[`src/generation/`](src/generation) defines how resolved research becomes a
+candidate `DeviceProfile` document, and how that candidate is gated through
+an injected validator before anything may treat it as real — deterministic
+by construction, with no AI or inference inside either step. See
+[`docs/generation-pipeline.md`](docs/generation-pipeline.md).
+
 ## Research materials
 
 Raw research material — manufacturer PDFs, reference links — lives under

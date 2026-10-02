@@ -17,6 +17,10 @@
     "./evidence": {
       "types": "./dist/evidence/index.d.ts",
       "import": "./dist/evidence/index.js"
+    },
+    "./generation": {
+      "types": "./dist/generation/index.d.ts",
+      "import": "./dist/generation/index.js"
     }
   },
   "scripts": {
