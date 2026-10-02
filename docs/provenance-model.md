@@ -125,5 +125,5 @@ different jobs.
 - **No dependency on `midi-core`** — same stance as the evidence model and
   generation pipeline: this repo doesn't import `midi-core`'s types.
   `path`'s notation lines up with `ProfileDiagnostic.path` by convention.
-- **No CLI or tooling surface** — ECS-46 is what will actually drive this
-  against real evidence and a real generated profile.
+- **No CLI or tooling surface** — see [`docs/cli.md`](./cli.md) (ECS-46),
+  which drives this against real evidence and a real generated profile.

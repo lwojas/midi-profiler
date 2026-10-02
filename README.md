@@ -1,7 +1,7 @@
 # MIDI Profiler
 
-Offline tooling for researching real MIDI devices and, eventually,
-generating [`DeviceProfile`](https://github.com/lwojas/midi-core/blob/main/docs/contracts/device-profile.md)
+Offline tooling for researching real MIDI devices and generating
+[`DeviceProfile`](https://github.com/lwojas/midi-core/blob/main/docs/contracts/device-profile.md)
 documents consumable by [`midi-core`](https://github.com/lwojas/midi-core).
 Deterministic by design, same as `midi-core` itself: no runtime
 inference or AI-driven guessing anywhere in this tool's output, only
@@ -38,6 +38,23 @@ how confident its value is and the evidence that backs it — manufacturer-
 documented, DAW-discovered, inferred, experimentally verified, or honestly
 unknown, so a proprietary, undocumented handshake can be represented as
 such instead of invented. See [`docs/provenance-model.md`](docs/provenance-model.md).
+
+## CLI
+
+[`src/cli/`](src/cli) ties the three pieces above together into a runnable
+tool: ingest the evidence catalogue, and run an authored candidate profile
+through generation, validation, and field-provenance checking in one pass.
+No AI or network call anywhere in it.
+
+```
+npx midi-profiler evidence list --device "Launchpad Mini [MK3]"
+npx midi-profiler generate profile-input.json --validator ./validate.mjs --out report.json
+```
+
+`--validator` points at a module exporting `validateDeviceProfile`
+(`midi-core`'s real one, in practice — this repo still has no code
+dependency on it). Exit code is `0` exactly when the generated report is
+ready for Deterministic Runtime Behaviour. See [`docs/cli.md`](docs/cli.md).
 
 ## Research materials
 

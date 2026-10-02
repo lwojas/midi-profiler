@@ -133,10 +133,10 @@ backs the rest of the document.
   not per-field. That finer-grained linking is
   [`docs/provenance-model.md`](./provenance-model.md)'s job (ECS-45), a
   sibling of this ticket, not a dependency either way.
-- **No CLI or tooling surface** — ECS-46 ("Build MIDI Profiler CLI/tooling")
-  is what will actually drive these functions end to end against real
-  research and midi-core's real validator. This ticket only defines the
-  pipeline's shape.
+- **No CLI or tooling surface** — see [`docs/cli.md`](./cli.md) (ECS-46,
+  "Build MIDI Profiler CLI/tooling"), which drives these functions end to
+  end against real research and midi-core's real validator. This ticket
+  only defines the pipeline's shape.
 - **No schema mirror of `DeviceProfile`** — see `profile`'s field above;
   deliberately `Record<string, unknown>`, not a duplicated type.
 - **No defaulting or correction** — same stance as midi-core's own
