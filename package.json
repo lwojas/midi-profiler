@@ -1,0 +1,35 @@
+{
+  "name": "midi-profiler",
+  "version": "0.1.0",
+  "description": "Offline tooling for researching MIDI devices and generating device profiles consumable by midi-core.",
+  "type": "module",
+  "main": "dist/evidence/index.js",
+  "types": "dist/evidence/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/evidence/index.d.ts",
+      "import": "./dist/evidence/index.js"
+    },
+    "./evidence": {
+      "types": "./dist/evidence/index.d.ts",
+      "import": "./dist/evidence/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "author": "Lech Wojas",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.7"
+  }
+}
