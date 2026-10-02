@@ -59,8 +59,17 @@ ready for Deterministic Runtime Behaviour. See [`docs/cli.md`](docs/cli.md).
 ## Research materials
 
 Raw research material — manufacturer PDFs, reference links — lives under
-[`research/`](research), catalogued as `Evidence` in
+[`research/`](research), one folder per device, catalogued as `Evidence` in
 [`src/evidence/manifest.ts`](src/evidence/manifest.ts).
+
+## Profiling a real device
+
+[`docs/profiling-workflow.md`](docs/profiling-workflow.md) is the
+step-by-step guide tying all of the above together: where research and
+drafted profiles go, a ready-to-use prompt for AI-assisted extraction from
+evidence, and how to run the result through the CLI against `midi-core`'s
+real validator. Written in preparation for
+[ECS-47](https://linear.app/ecs3d/issue/ECS-47/create-first-real-device-profile-as-profiler-validation-exercise).
 
 ## Development
 

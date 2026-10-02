@@ -16,7 +16,7 @@ export const EVIDENCE: readonly Evidence[] = [
     id: "novation.launch-control-3.programmers-reference-guide",
     device: NOVATION_LAUNCH_CONTROL_3,
     kind: "manufacturer-documentation",
-    source: { type: "file", path: "research/launch_control_3_programmer_s_reference_guide.pdf" },
+    source: { type: "file", path: "research/novation-launch-control-3/programmers-reference-guide.pdf" },
     title: "Launch Control 3 programmer's reference guide (v1.1)",
     notes:
       "Covers standalone MIDI mode, DAW mode (control, colouring the surface, controlling the screen), " +
@@ -26,7 +26,7 @@ export const EVIDENCE: readonly Evidence[] = [
     id: "novation.launchpad-mini-mk3.programmers-reference-manual",
     device: NOVATION_LAUNCHPAD_MINI_MK3,
     kind: "manufacturer-documentation",
-    source: { type: "file", path: "research/Launchpad Mini - Programmers Reference Manual.pdf" },
+    source: { type: "file", path: "research/novation-launchpad-mini-mk3/programmers-reference-manual.pdf" },
     title: "Launchpad Mini [MK3] Programmer's reference manual",
     notes:
       "Covers Device Inquiry, SysEx message format, layout selection, Programmer/Live mode switch, " +

@@ -77,11 +77,14 @@ leaving the model proven only against a fictional fixture:
 
 - Two `manufacturer-documentation` entries — Novation's own Launch
   Control 3 and Launchpad Mini [MK3] programmer's reference
-  guides/manuals (`research/*.pdf`).
+  guides/manuals, one per-device folder each
+  (`research/novation-launch-control-3/`, `research/novation-launchpad-mini-mk3/`
+  — see [`docs/profiling-workflow.md`](./profiling-workflow.md) for the
+  folder convention).
 - One `mapping-reference` entry with no `device` — a community guide to
   Ableton's Live Object Model map, background on how DAW remote scripts
   map a controller in general, not specific to either device above
-  (`research/useful-mapping-repos.md`'s link).
+  (`research/general/useful-mapping-repos.md`'s link).
 
 `src/evidence/manifest.test.ts` checks the manifest stays honest: every
 `file`-sourced entry's `path` must actually exist on disk, and every
