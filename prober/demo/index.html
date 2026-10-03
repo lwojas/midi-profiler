@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MIDI Prober — single-probe MVP</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; color: #111; }
+    h1 { font-size: 1.25rem; }
+    section { margin-bottom: 1.5rem; }
+    button { font: inherit; padding: 0.4rem 0.8rem; margin-right: 0.5rem; cursor: pointer; }
+    select, input, textarea { font: inherit; padding: 0.3rem; }
+    label { display: block; margin-top: 0.5rem; font-size: 0.9rem; }
+    .row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .row > div { flex: 1; min-width: 140px; }
+    textarea { width: 100%; box-sizing: border-box; font-family: ui-monospace, monospace; }
+    #log { background: #111; color: #0f0; font-family: ui-monospace, monospace; font-size: 0.85rem; padding: 0.75rem; height: 220px; overflow-y: auto; border-radius: 4px; white-space: pre-wrap; }
+    .state { font-weight: 600; }
+    .muted { color: #666; font-size: 0.9rem; }
+    fieldset { border: 1px solid #ddd; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>MIDI Prober — single-probe MVP (ECS-60)</h1>
+  <p class="muted">
+    Connects to a real device via midi-core's Web MIDI adapter, sends one
+    operator-specified probe (Control Change, Note, or raw SysEx), and
+    records exactly what comes back. Interactive and single-shot — "test
+    this now" during a profiling session, not an automated sweep. See
+    <code>../../docs/device-prober-mvp.md</code>.
+  </p>
+
+  <section>
+    <button id="request">Request MIDI access</button>
+    <span id="access-status" class="muted"></span>
+  </section>
+
+  <section>
+    <label for="input-select">Input port:</label>
+    <select id="input-select"></select>
+    <label for="output-select">Output port:</label>
+    <select id="output-select"></select>
+    <button id="connect" disabled>Connect both</button>
+    <button id="disconnect" disabled>Disconnect both</button>
+    <div>Input state: <span id="input-state" class="state">-</span> · Output state: <span id="output-state" class="state">-</span></div>
+  </section>
+
+  <section>
+    <fieldset>
+      <legend>Probe</legend>
+      <div class="row">
+        <div>
+          <label for="manufacturer">Device manufacturer</label>
+          <input id="manufacturer" placeholder="Novation" />
+        </div>
+        <div>
+          <label for="model">Device model</label>
+          <input id="model" placeholder="Launchpad Mini [MK3]" />
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label for="session-id">Session id</label>
+          <input id="session-id" value="manual-probe" />
+        </div>
+        <div>
+          <label for="step-id">Step id</label>
+          <input id="step-id" value="step-1" />
+        </div>
+      </div>
+      <label for="description">Description (optional — a default is generated from the message)</label>
+      <input id="description" style="width: 100%; box-sizing: border-box;" />
+
+      <label for="kind">Message</label>
+      <select id="kind">
+        <option value="cc">Control Change</option>
+        <option value="note-on">Note On</option>
+        <option value="note-off">Note Off</option>
+        <option value="sysex">Raw SysEx</option>
+      </select>
+
+      <div class="row" id="channel-row">
+        <div>
+          <label for="channel">Channel (1-16)</label>
+          <input id="channel" type="number" min="1" max="16" value="1" />
+        </div>
+        <div id="cc-fields">
+          <label for="controller">Controller</label>
+          <input id="controller" type="number" min="0" max="127" value="0" />
+          <label for="value">Value</label>
+          <input id="value" type="number" min="0" max="127" value="127" />
+        </div>
+        <div id="note-fields" style="display: none;">
+          <label for="note">Note</label>
+          <input id="note" type="number" min="0" max="127" value="60" />
+          <label for="velocity">Velocity</label>
+          <input id="velocity" type="number" min="0" max="127" value="100" />
+        </div>
+      </div>
+      <div id="sysex-field" style="display: none;">
+        <label for="sysex">Raw bytes (hex, space or comma separated — include F0/F7)</label>
+        <textarea id="sysex" rows="2" placeholder="F0 00 20 29 02 0D 0E 01 F7"></textarea>
+      </div>
+
+      <label for="listen-ms">Listen afterward (ms)</label>
+      <input id="listen-ms" type="number" min="0" value="200" />
+
+      <div style="margin-top: 0.75rem;">
+        <button id="send" disabled>Send probe</button>
+        <button id="download" disabled>Download session.json</button>
+      </div>
+    </fieldset>
+  </section>
+
+  <section>
+    <div class="muted">Log:</div>
+    <div id="log"></div>
+  </section>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

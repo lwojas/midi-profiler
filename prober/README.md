@@ -21,9 +21,31 @@ src/
 examples/
   midi-core-mock-transport.mjs   a real --transport module wired to
                                   midi-core's real mock device
+demo/
+  index.html, main.js, serve.mjs   interactive single-probe MVP against a
+                                    REAL device, via midi-core's Web MIDI
+                                    adapter -- see docs/device-prober-mvp.md
 ```
 
-## Running a probe
+## Running a single probe interactively, against real hardware
+
+For "test this one message against the device right now" — no plan file,
+no `--transport` glue script — run the browser-based MVP instead:
+
+```sh
+cd ../../midi-core && npm run build   # once, if you haven't already
+npm run build
+npm run demo
+# -> http://localhost:4174/demo/index.html
+```
+
+Request MIDI access, pick the real device's ports, fill in one CC/Note/raw
+SysEx message, send it, and download the resulting one-step `session.json`
+— it's the exact same shape step 4 below expects. See
+[`../docs/device-prober-mvp.md`](../docs/device-prober-mvp.md) for why this
+is a browser page rather than a new CLI command.
+
+## Running an automated probe sequence
 
 1. Write a plan — the device and the ordered steps to run:
 

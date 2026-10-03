@@ -199,6 +199,10 @@ itself.
   browser) or a Node-native MIDI transport is the same kind of follow-on
   work midi-core itself scoped as a separate ticket (ECS-31) once its own
   input/output contracts existed — not bolted onto this one.
+  [docs/device-prober-mvp.md](./device-prober-mvp.md) (ECS-60) is that
+  follow-on: a browser demo page wiring midi-core's real Web MIDI adapter
+  to this app's real `runProbeSession`, for one operator-specified probe at
+  a time.
 - **No automatic evidence registration.** Writing a `ProbeSession` to
   `research/.../captured-traffic/` and adding it to
   `src/evidence/manifest.ts` are both manual steps, on purpose — the same
