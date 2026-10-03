@@ -1,0 +1,2491 @@
+{
+  "profile": {
+    "schemaVersion": "1.0",
+    "identity": {
+      "id": "novation.launchpad-mini-mk3",
+      "manufacturer": "Novation",
+      "model": "Launchpad Mini [MK3]"
+    },
+    "ports": [
+      {
+        "id": "midi-in",
+        "type": "input",
+        "role": "main",
+        "required": true,
+        "messageTypes": [
+          "note-on",
+          "note-off",
+          "control-change",
+          "sysex"
+        ]
+      },
+      {
+        "id": "midi-out",
+        "type": "output",
+        "role": "main",
+        "required": true,
+        "messageTypes": [
+          "note-on",
+          "note-off",
+          "control-change",
+          "sysex"
+        ]
+      },
+      {
+        "id": "daw-in",
+        "type": "input",
+        "role": "daw-control",
+        "required": false,
+        "messageTypes": [
+          "note-on",
+          "note-off",
+          "control-change",
+          "channel-pressure",
+          "poly-pressure"
+        ]
+      },
+      {
+        "id": "daw-out",
+        "type": "output",
+        "role": "daw-control",
+        "required": false,
+        "messageTypes": [
+          "note-on",
+          "note-off",
+          "control-change"
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "id": "pad-81",
+        "label": "Pad (note 81)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 81
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 81
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-82",
+        "label": "Pad (note 82)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 82
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 82
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-83",
+        "label": "Pad (note 83)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 83
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 83
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-84",
+        "label": "Pad (note 84)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 84
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 84
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-85",
+        "label": "Pad (note 85)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 85
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 85
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-86",
+        "label": "Pad (note 86)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 86
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 86
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-87",
+        "label": "Pad (note 87)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 87
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 87
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-88",
+        "label": "Pad (note 88)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 88
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 88
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-71",
+        "label": "Pad (note 71)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 71
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 71
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-72",
+        "label": "Pad (note 72)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 72
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 72
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-73",
+        "label": "Pad (note 73)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 73
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 73
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-74",
+        "label": "Pad (note 74)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 74
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 74
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-75",
+        "label": "Pad (note 75)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 75
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 75
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-76",
+        "label": "Pad (note 76)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 76
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 76
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-77",
+        "label": "Pad (note 77)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 77
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 77
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-78",
+        "label": "Pad (note 78)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 78
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 78
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-61",
+        "label": "Pad (note 61)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 61
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 61
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-62",
+        "label": "Pad (note 62)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 62
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 62
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-63",
+        "label": "Pad (note 63)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 63
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 63
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-64",
+        "label": "Pad (note 64)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 64
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 64
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-65",
+        "label": "Pad (note 65)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 65
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 65
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-66",
+        "label": "Pad (note 66)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 66
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 66
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-67",
+        "label": "Pad (note 67)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 67
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 67
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-68",
+        "label": "Pad (note 68)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 68
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 68
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-51",
+        "label": "Pad (note 51)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 51
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 51
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-52",
+        "label": "Pad (note 52)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 52
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 52
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-53",
+        "label": "Pad (note 53)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 53
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 53
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-54",
+        "label": "Pad (note 54)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 54
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 54
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-55",
+        "label": "Pad (note 55)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 55
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 55
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-56",
+        "label": "Pad (note 56)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 56
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 56
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-57",
+        "label": "Pad (note 57)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 57
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 57
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-58",
+        "label": "Pad (note 58)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 58
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 58
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-41",
+        "label": "Pad (note 41)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 41
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 41
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-42",
+        "label": "Pad (note 42)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 42
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 42
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-43",
+        "label": "Pad (note 43)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 43
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 43
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-44",
+        "label": "Pad (note 44)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 44
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 44
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-45",
+        "label": "Pad (note 45)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 45
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 45
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-46",
+        "label": "Pad (note 46)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 46
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 46
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-47",
+        "label": "Pad (note 47)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 47
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 47
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-48",
+        "label": "Pad (note 48)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 48
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 48
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-31",
+        "label": "Pad (note 31)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 31
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 31
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-32",
+        "label": "Pad (note 32)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 32
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 32
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-33",
+        "label": "Pad (note 33)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 33
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 33
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-34",
+        "label": "Pad (note 34)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 34
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 34
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-35",
+        "label": "Pad (note 35)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 35
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 35
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-36",
+        "label": "Pad (note 36)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 36
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 36
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-37",
+        "label": "Pad (note 37)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 37
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 37
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-38",
+        "label": "Pad (note 38)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 38
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 38
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-21",
+        "label": "Pad (note 21)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 21
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 21
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-22",
+        "label": "Pad (note 22)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 22
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 22
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-23",
+        "label": "Pad (note 23)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 23
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 23
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-24",
+        "label": "Pad (note 24)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 24
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 24
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-25",
+        "label": "Pad (note 25)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 25
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 25
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-26",
+        "label": "Pad (note 26)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 26
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 26
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-27",
+        "label": "Pad (note 27)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 27
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 27
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-28",
+        "label": "Pad (note 28)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 28
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 28
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-11",
+        "label": "Pad (note 11)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 11
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 11
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-12",
+        "label": "Pad (note 12)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 12
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 12
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-13",
+        "label": "Pad (note 13)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 13
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 13
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-14",
+        "label": "Pad (note 14)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 14
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 14
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-15",
+        "label": "Pad (note 15)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 15
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 15
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-16",
+        "label": "Pad (note 16)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 16
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 16
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-17",
+        "label": "Pad (note 17)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 17
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 17
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "pad-18",
+        "label": "Pad (note 18)",
+        "kind": "pad",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 18
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 18
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "top-91",
+        "label": "Top row button (CC 91)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 91
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 91
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "top-92",
+        "label": "Top row button (CC 92)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 92
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 92
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "top-93",
+        "label": "Top row button (CC 93)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 93
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 93
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "top-94",
+        "label": "Top row button (CC 94)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 94
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 94
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "top-95",
+        "label": "Top row button (CC 95)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 95
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 95
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "top-96",
+        "label": "Top row button (CC 96)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 96
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 96
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "top-97",
+        "label": "Top row button (CC 97)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 97
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 97
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "top-98",
+        "label": "Top row button (CC 98)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 98
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 98
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "side-89",
+        "label": "Side column button (CC 89)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 89
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 89
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "side-79",
+        "label": "Side column button (CC 79)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 79
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 79
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "side-69",
+        "label": "Side column button (CC 69)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 69
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 69
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "side-59",
+        "label": "Side column button (CC 59)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 59
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 59
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "side-49",
+        "label": "Side column button (CC 49)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 49
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 49
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "side-39",
+        "label": "Side column button (CC 39)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 39
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 39
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "side-29",
+        "label": "Side column button (CC 29)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 29
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 29
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "side-19",
+        "label": "Side column button (CC 19)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 19
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 19
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      },
+      {
+        "id": "logo",
+        "label": "Logo button (CC 99)",
+        "kind": "button",
+        "portId": "midi-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 99
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 99
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        }
+      }
+    ],
+    "grids": [
+      {
+        "id": "pads",
+        "label": "8x8 pad grid",
+        "rows": 8,
+        "columns": 8,
+        "cells": [
+          {
+            "row": 0,
+            "column": 0,
+            "controlId": "pad-81"
+          },
+          {
+            "row": 0,
+            "column": 1,
+            "controlId": "pad-82"
+          },
+          {
+            "row": 0,
+            "column": 2,
+            "controlId": "pad-83"
+          },
+          {
+            "row": 0,
+            "column": 3,
+            "controlId": "pad-84"
+          },
+          {
+            "row": 0,
+            "column": 4,
+            "controlId": "pad-85"
+          },
+          {
+            "row": 0,
+            "column": 5,
+            "controlId": "pad-86"
+          },
+          {
+            "row": 0,
+            "column": 6,
+            "controlId": "pad-87"
+          },
+          {
+            "row": 0,
+            "column": 7,
+            "controlId": "pad-88"
+          },
+          {
+            "row": 1,
+            "column": 0,
+            "controlId": "pad-71"
+          },
+          {
+            "row": 1,
+            "column": 1,
+            "controlId": "pad-72"
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "controlId": "pad-73"
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "controlId": "pad-74"
+          },
+          {
+            "row": 1,
+            "column": 4,
+            "controlId": "pad-75"
+          },
+          {
+            "row": 1,
+            "column": 5,
+            "controlId": "pad-76"
+          },
+          {
+            "row": 1,
+            "column": 6,
+            "controlId": "pad-77"
+          },
+          {
+            "row": 1,
+            "column": 7,
+            "controlId": "pad-78"
+          },
+          {
+            "row": 2,
+            "column": 0,
+            "controlId": "pad-61"
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "controlId": "pad-62"
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "controlId": "pad-63"
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "controlId": "pad-64"
+          },
+          {
+            "row": 2,
+            "column": 4,
+            "controlId": "pad-65"
+          },
+          {
+            "row": 2,
+            "column": 5,
+            "controlId": "pad-66"
+          },
+          {
+            "row": 2,
+            "column": 6,
+            "controlId": "pad-67"
+          },
+          {
+            "row": 2,
+            "column": 7,
+            "controlId": "pad-68"
+          },
+          {
+            "row": 3,
+            "column": 0,
+            "controlId": "pad-51"
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "controlId": "pad-52"
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "controlId": "pad-53"
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "controlId": "pad-54"
+          },
+          {
+            "row": 3,
+            "column": 4,
+            "controlId": "pad-55"
+          },
+          {
+            "row": 3,
+            "column": 5,
+            "controlId": "pad-56"
+          },
+          {
+            "row": 3,
+            "column": 6,
+            "controlId": "pad-57"
+          },
+          {
+            "row": 3,
+            "column": 7,
+            "controlId": "pad-58"
+          },
+          {
+            "row": 4,
+            "column": 0,
+            "controlId": "pad-41"
+          },
+          {
+            "row": 4,
+            "column": 1,
+            "controlId": "pad-42"
+          },
+          {
+            "row": 4,
+            "column": 2,
+            "controlId": "pad-43"
+          },
+          {
+            "row": 4,
+            "column": 3,
+            "controlId": "pad-44"
+          },
+          {
+            "row": 4,
+            "column": 4,
+            "controlId": "pad-45"
+          },
+          {
+            "row": 4,
+            "column": 5,
+            "controlId": "pad-46"
+          },
+          {
+            "row": 4,
+            "column": 6,
+            "controlId": "pad-47"
+          },
+          {
+            "row": 4,
+            "column": 7,
+            "controlId": "pad-48"
+          },
+          {
+            "row": 5,
+            "column": 0,
+            "controlId": "pad-31"
+          },
+          {
+            "row": 5,
+            "column": 1,
+            "controlId": "pad-32"
+          },
+          {
+            "row": 5,
+            "column": 2,
+            "controlId": "pad-33"
+          },
+          {
+            "row": 5,
+            "column": 3,
+            "controlId": "pad-34"
+          },
+          {
+            "row": 5,
+            "column": 4,
+            "controlId": "pad-35"
+          },
+          {
+            "row": 5,
+            "column": 5,
+            "controlId": "pad-36"
+          },
+          {
+            "row": 5,
+            "column": 6,
+            "controlId": "pad-37"
+          },
+          {
+            "row": 5,
+            "column": 7,
+            "controlId": "pad-38"
+          },
+          {
+            "row": 6,
+            "column": 0,
+            "controlId": "pad-21"
+          },
+          {
+            "row": 6,
+            "column": 1,
+            "controlId": "pad-22"
+          },
+          {
+            "row": 6,
+            "column": 2,
+            "controlId": "pad-23"
+          },
+          {
+            "row": 6,
+            "column": 3,
+            "controlId": "pad-24"
+          },
+          {
+            "row": 6,
+            "column": 4,
+            "controlId": "pad-25"
+          },
+          {
+            "row": 6,
+            "column": 5,
+            "controlId": "pad-26"
+          },
+          {
+            "row": 6,
+            "column": 6,
+            "controlId": "pad-27"
+          },
+          {
+            "row": 6,
+            "column": 7,
+            "controlId": "pad-28"
+          },
+          {
+            "row": 7,
+            "column": 0,
+            "controlId": "pad-11"
+          },
+          {
+            "row": 7,
+            "column": 1,
+            "controlId": "pad-12"
+          },
+          {
+            "row": 7,
+            "column": 2,
+            "controlId": "pad-13"
+          },
+          {
+            "row": 7,
+            "column": 3,
+            "controlId": "pad-14"
+          },
+          {
+            "row": 7,
+            "column": 4,
+            "controlId": "pad-15"
+          },
+          {
+            "row": 7,
+            "column": 5,
+            "controlId": "pad-16"
+          },
+          {
+            "row": 7,
+            "column": 6,
+            "controlId": "pad-17"
+          },
+          {
+            "row": 7,
+            "column": 7,
+            "controlId": "pad-18"
+          }
+        ]
+      }
+    ],
+    "sysex": {
+      "manufacturerId": [
+        0,
+        32,
+        41
+      ],
+      "required": false,
+      "notes": "Vendor SysEx is one of several ways to reach Programmer mode and light the surface (the Programmer/Live mode switch message, or the device's own setup menu) and Note/CC-based colour-setting fully covers lighting without any SysEx, so normal operation doesn't depend on it."
+    },
+    "handshake": {
+      "required": false,
+      "steps": [
+        {
+          "id": "device-inquiry-request",
+          "direction": "send",
+          "description": "Send the Universal Device Inquiry SysEx message (F0h 7Eh 7Fh 06h 01h F7h) to identify the device."
+        },
+        {
+          "id": "device-inquiry-reply",
+          "direction": "expect",
+          "description": "Expect the Device Inquiry reply (F0h 7Eh 00h 06h 02h 00h 20h 29h 13h 01h 00h 00h <app_version> F7h for Application mode, or the equivalent Bootloader-mode reply), confirming the Novation manufacturer id and the Launchpad Mini [MK3] family code (13h 01h)."
+        },
+        {
+          "id": "enter-programmer-mode",
+          "direction": "send",
+          "description": "Send the Programmer/Live mode SysEx message (F0h 00h 20h 29h 02h 0Dh 0Eh 01h F7h) to switch the device into Programmer mode, enabling the generic note/CC addressing this profile's controls use."
+        }
+      ]
+    }
+  },
+  "evidenceIds": [
+    "novation.launchpad-mini-mk3.programmers-reference-manual",
+    "novation.launchpad-mini-mk3.launchpad95-remote-script"
+  ],
+  "unresolved": [
+    {
+      "path": "controls (top row / side column / logo labels)",
+      "reason": "The manual's Programmer-mode address chart (p.10) and LED-lighting SysEx section (p.14) give each top-row/side-column/logo button's CC address but not its physical function or silkscreen label. Launchpad95's own names for these buttons (Session_Button, User1_Button, Vol_Button, Pan_Button, etc.) are that script's internal Ableton-functional remapping, not a verified statement of Novation's printed labels, so labels were left generic/positional rather than guessed."
+    },
+    {
+      "path": "controls (Session-mode & DAW Fader-layout addressing)",
+      "reason": "The manual's \"Software Interaction\" chapter (p.15-19) fully documents a second, separate generic address scheme (Session layout + DAW Fader layout) used over the DAW In/Out port (ports[2]/ports[3]), but this profile only models the Programmer-mode address scheme over the MIDI In/Out port. Modeling the DAW-port scheme as its own parallel set of controls is left for a follow-up profile revision."
+    },
+    {
+      "path": "ports (which port carries DAW-mode configuration SysEx)",
+      "reason": "The manual documents SysEx commands for enabling DAW mode (p.15), DAW Fader bank setup (p.18), DAW Session button colour (p.19), and DAW state clear (p.16), but never states whether these are sent over the MIDI In/Out port or the DAW In/Out port."
+    },
+    {
+      "path": "(bootloader device-ID / onboarding / brightness pad layout)",
+      "reason": "The \"Bootloader\" chapter (p.5) describes a separate pad layout for setting the USB device ID, toggling onboarding, and adjusting brightness while the device is in bootloader mode. Not modeled as part of this profile's `controls` — it's a distinct pre-boot UI, not part of the addressable Programmer-mode surface this profile describes."
+    },
+    {
+      "path": "(brightness level / internal-external LED feedback configuration messages)",
+      "reason": "The \"Configuration messages\" chapter (p.22) documents global SysEx commands for brightness level (0-127) and internal/external LED feedback toggles. DeviceProfile's schema has no field for device-wide configuration commands like these, so they aren't represented anywhere in this profile."
+    }
+  ],
+  "fieldProvenance": [
+    {
+      "path": "identity",
+      "confidence": "manufacturer-documented",
+      "evidenceIds": [
+        "novation.launchpad-mini-mk3.programmers-reference-manual"
+      ],
+      "notes": "Manufacturer and model per the manual's own title (\"Launchpad Mini [MK3] Programmer's reference manual\") and \"About this Guide\" (p.4): \"This document provides all the information you need to be able to control Launchpad Mini [MK3].\" Corroborated by the Device Inquiry reply's Novation manufacturer id and family code (p.6)."
+    },
+    {
+      "path": "ports[0]",
+      "confidence": "manufacturer-documented",
+      "evidenceIds": [
+        "novation.launchpad-mini-mk3.programmers-reference-manual"
+      ],
+      "notes": "\"MIDI on Launchpad Mini [MK3]\" (p.6): \"LPMiniMK3 MIDI In / Out ... is used to receive MIDI from Custom modes; and is used to provide external MIDI input or Light controls in Lighting Custom Modes and Programmer mode.\" This profile's controls (Programmer mode addressing) run over this port."
+    },
+    {
+      "path": "ports[1]",
+      "confidence": "manufacturer-documented",
+      "evidenceIds": [
+        "novation.launchpad-mini-mk3.programmers-reference-manual"
+      ],
+      "notes": "Same source as ports[0] — the MIDI In/Out interface's output direction."
+    },
+    {
+      "path": "ports[2]",
+      "confidence": "manufacturer-documented",
+      "evidenceIds": [
+        "novation.launchpad-mini-mk3.programmers-reference-manual"
+      ],
+      "notes": "\"MIDI on Launchpad Mini [MK3]\" (p.6): \"LPMiniMK3 DAW In / Out ... is used by DAWs and similar software to interact with the Launchpad Mini [MK3]'s Session mode.\" messageTypes per \"The DAW In/Out interface\" (p.15): \"The Launchpad Mini [MK3] sends button and pad events to the DAW as follows: Channel 1 ... Session layout activities. Channel 5 ... DAW fader activities ... Aftertouch (either as key aftertouch or channel pressure depending on configuration) is also sent.\""
+    },
+    {
+      "path": "ports[3]",
+      "confidence": "manufacturer-documented",
+      "evidenceIds": [
+        "novation.launchpad-mini-mk3.programmers-reference-manual"
+      ],
+      "notes": "messageTypes per \"The DAW In/Out interface\" (p.15): \"Channel 1 ... Static colour on Session layout. Channel 2 ... Flashing colour ... Channel 3 ... Pulsing colour ... Channel 5 ... DAW Fader position sets. Channel 6 ... DAW Fader colour sets. Channel 16 ... External note injection.\""
+    },
+    {
+      "path": "ports[*].required",
+      "confidence": "inferred",
+      "evidenceIds": [
+        "novation.launchpad-mini-mk3.programmers-reference-manual"
+      ],
+      "notes": "The manual never uses the word \"required.\" Inferred true for the MIDI In/Out port because this profile's controls (the Programmer-mode address scheme) run over it and nothing else documented reaches them; inferred false for the DAW In/Out port because the manual frames it as what a DAW \"may\" use (\"If you wish to use Launchpad Mini [MK3] as a control surface for a DAW ... you will likely want to use the DAW interface ... Otherwise, you may interact with the device using the MIDI interface,\" p.6) — matching device-profile.md's own example of \"an optional second port running a DAW-remote mode.\""
+    },
+    {
+      "path": "controls",
+      "confidence": "manufacturer-documented",
+      "evidenceIds": [
+        "novation.launchpad-mini-mk3.programmers-reference-manual"
+      ],
+      "notes": "Addresses per the \"Programmer mode layout\" chart (p.10, 64 pads as notes 11-88 plus a CC column/row), corroborated by \"LED lighting SysEx message\" (p.14): \"The message may contain up to 81 <colourspec> entries to light up the entire Launchpad Mini [MK3] surface\" (64 pads + 8 top-row + 8 side-column + 1 logo = 81, matching this profile's control count). By convention, each control's portId references its input-direction port (midi-in); feedback for the same physical control travels back over the paired midi-out port of the same USB MIDI In/Out interface."
+    },
+    {
+      "path": "controls[*].input.channel",
+      "confidence": "daw-discovered",
+      "evidenceIds": [
+        "novation.launchpad-mini-mk3.launchpad95-remote-script"
+      ],
+      "notes": "The manual states only the generic Note On status byte range (90h-9Fh, p.6) without pinning a specific channel for plain button-press/release reporting in Programmer mode. Launchpad95's Launchpad.py resolves this: its `_mk3_rgb` branch constructs every pad as `ButtonElement(is_momentary, MIDI_NOTE_TYPE, 0, midi_note, ...)` and every top-row/side-column button as `ButtonElement(is_momentary, MIDI_CC_TYPE, 0, ...)` — the channel argument `0` is MIDI channel 1 (Core's 0-based Channel)."
+    },
+    {
+      "path": "controls[*].feedback",
+      "confidence": "manufacturer-documented",
+      "evidenceIds": [
+        "novation.launchpad-mini-mk3.programmers-reference-manual"
+      ],
+      "notes": "\"Sending colours by MIDI events\" (p.12): \"Channel 1, Notes: 90h (144), Control Changes: B0h (176): Static colour ... The Note number selects the pad to control (as shown on the layout mappings) and the velocity the colour to use (as shown on the colour palette). Similarly, for Control Changes the CC number selects the pad to control and the value the colour to use.\" paletteSize 128 per the Colour palette chart (p.11, entries 0-127). Flashing (channel 2) and pulsing (channel 3) colour modes are also documented on the same controls but aren't modeled — ControlFeedback carries one address per control, so static colour (channel 1) was chosen as the representative feedback address."
+    },
+    {
+      "path": "grids[0]",
+      "confidence": "manufacturer-documented",
+      "evidenceIds": [
+        "novation.launchpad-mini-mk3.programmers-reference-manual"
+      ],
+      "notes": "The \"Programmer mode layout\" 8x8 pad grid image (p.10)."
+    },
+    {
+      "path": "sysex",
+      "confidence": "manufacturer-documented",
+      "evidenceIds": [
+        "novation.launchpad-mini-mk3.programmers-reference-manual",
+        "novation.launchpad-mini-mk3.launchpad95-remote-script"
+      ],
+      "notes": "\"SysEx message format used by the device\" (p.6): every message starts \"F0h 00h 20h 29h ...\" — 00h/20h/29h is the manufacturer id. Corroborated by Launchpad95's `NOVATION_MANUFACTURER_ID = (0, 32, 41)`. required:false because SysEx is one of several ways to reach Programmer mode (\"You can use the Programmer / Live mode switch message ... or access it from the setup menu,\" p.9) and Note/CC-based colour-setting (p.12-13) fully covers lighting without any SysEx."
+    },
+    {
+      "path": "handshake",
+      "confidence": "manufacturer-documented",
+      "evidenceIds": [
+        "novation.launchpad-mini-mk3.programmers-reference-manual",
+        "novation.launchpad-mini-mk3.launchpad95-remote-script"
+      ],
+      "notes": "\"Device Inquiry message\" (p.6) and \"Programmer / Live mode switch\" (p.7) document the steps above. Corroborated by Launchpad95's `SYSEX_IDENTITY_REQUEST_MESSAGE` and its challenge/response device-identification flow (`LP_MINI_MK3_FAMILY_CODE = (19, 1)`, `LP_MINI_MK3_ID = 13`). required:false because the device works standalone (Session/Custom modes) without any handshake — these steps document the software-integration sequence, not a mandatory boot requirement."
+    }
+  ]
+}

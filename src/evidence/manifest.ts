@@ -33,6 +33,21 @@ export const EVIDENCE: readonly Evidence[] = [
       "LED lighting SysEx, DAW In/Out interface, DAW faders, and configuration messages.",
   },
   {
+    id: "novation.launchpad-mini-mk3.launchpad95-remote-script",
+    device: NOVATION_LAUNCHPAD_MINI_MK3,
+    kind: "daw-integration",
+    source: { type: "file", path: "research/novation-launchpad-mini-mk3/Launchpad95/Launchpad.py" },
+    title: "Launchpad95 — community Ableton Live Remote Script, Launchpad Mini MK3/X support (Launchpad.py)",
+    notes:
+      "Third-party (not Novation's own) Python Remote Script for Ableton Live. Its MK3-specific branch " +
+      "(`_mk3_rgb`) confirms, by how it actually talks to the device: the Device Inquiry family code/id used " +
+      "to identify a Launchpad Mini MK3 (`LP_MINI_MK3_FAMILY_CODE = (19, 1)`, `LP_MINI_MK3_ID = 13`, matching " +
+      "the manual's SysEx inquiry reply bytes 13h 01h), the Novation SysEx manufacturer id " +
+      "(`NOVATION_MANUFACTURER_ID = (0, 32, 41)`), and that pad/top-row/side-column buttons all send and " +
+      "receive on MIDI channel 1 (`ButtonElement(..., channel=0, ...)`) — a fact the manual itself never pins " +
+      "down explicitly for plain button-press reporting.",
+  },
+  {
     id: "ableton.live-object-model-map",
     // No `device`: this is about how Ableton's Remote Scripts map a controller into Live in
     // general, not research about any one controller.
