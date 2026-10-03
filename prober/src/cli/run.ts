@@ -1,8 +1,10 @@
+import { runDraftEvidenceCommand } from "./commands/draft-evidence.js";
 import { runProbeCommand } from "./commands/probe.js";
 import { extractFlag } from "./parse-args.js";
 
 const USAGE = `Usage:
-  midi-prober probe <plan.json> --transport <module> [--out <file>]`;
+  midi-prober probe <plan.json> --transport <module> [--out <file>]
+  midi-prober draft-evidence <session.json> [--kind captured-traffic|experiment-note] [--research-path <path>] [--out <file>]`;
 
 export interface RunIO {
   readonly log: (message: string) => void;
@@ -39,6 +41,27 @@ export async function run(argv: readonly string[], io: RunIO = DEFAULT_IO): Prom
       const { output } = await runProbeCommand({
         planPath,
         transportPath,
+        outPath: extractFlag(flags, "out"),
+      });
+      io.log(output);
+      return 0;
+    } catch (error) {
+      io.error(error instanceof Error ? error.message : String(error));
+      return 1;
+    }
+  }
+
+  if (command === "draft-evidence") {
+    const [sessionPath, ...flags] = rest;
+    if (sessionPath === undefined) {
+      io.error(USAGE);
+      return 1;
+    }
+    try {
+      const { output } = await runDraftEvidenceCommand({
+        sessionPath,
+        kind: extractFlag(flags, "kind"),
+        researchPath: extractFlag(flags, "research-path"),
         outPath: extractFlag(flags, "out"),
       });
       io.log(output);

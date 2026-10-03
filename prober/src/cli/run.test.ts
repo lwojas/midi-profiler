@@ -43,4 +43,16 @@ describe("run", () => {
     expect(await run(["probe", "/nonexistent/plan.json", "--transport", "/nonexistent/transport.mjs"], io)).toBe(1);
     expect(errors.length).toBe(1);
   });
+
+  it("exits 1 for draft-evidence with no session path", async () => {
+    const { io, errors } = captureIo();
+    expect(await run(["draft-evidence"], io)).toBe(1);
+    expect(errors[0]).toContain("Usage:");
+  });
+
+  it("exits 1 and reports the error when the session file doesn't exist", async () => {
+    const { io, errors } = captureIo();
+    expect(await run(["draft-evidence", "/nonexistent/session.json"], io)).toBe(1);
+    expect(errors.length).toBe(1);
+  });
 });

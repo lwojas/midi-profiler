@@ -158,7 +158,10 @@ module), not the step-runner's.
 
 Per the ticket, probing has to feed the *same* pipeline the rest of this
 project already uses, not a parallel one. It does so as **data passed
-through files, not a code dependency**:
+through files, not a code dependency**. The exact `ProbeSession` →
+`Evidence` field mapping, and the `midi-prober draft-evidence` command that
+formats it, are [docs/probe-capture-bridge.md](./probe-capture-bridge.md)'s
+job (ECS-59) — summarized here at the level this ticket actually needs:
 
 1. `midi-prober probe <plan.json> --transport <module> --out <file>` writes
    a completed `ProbeSession` as JSON.
@@ -200,7 +203,9 @@ itself.
   `research/.../captured-traffic/` and adding it to
   `src/evidence/manifest.ts` are both manual steps, on purpose — the same
   "authored, not loaded" stance `docs/evidence-model.md` already takes for
-  every other kind of evidence.
+  every other kind of evidence. `docs/probe-capture-bridge.md`'s
+  `draft-evidence` command formats the manifest entry's text; it still
+  never writes to `src/evidence/manifest.ts` itself.
 - **No inference from a captured response to a profile field or a
   confidence level.** A `ProbeObservation` is exactly the bytes received;
   deciding that it confirms `controls[2].feedback` with
