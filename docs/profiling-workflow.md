@@ -213,6 +213,14 @@ from — react to each differently:
   confidence and `evidenceIds` contradict each other (a claimed confidence
   with nothing cited, or `"unknown"` with something cited anyway). Fix the
   entry, don't suppress the check.
+- **`uncoveredFields`** — a real field in `profile` with no `fieldProvenance`
+  entry (direct, ancestor, or `[*]` wildcard) covering it. Add the missing
+  citation — this is rule 2 of the extraction prompt above, enforced rather
+  than left to author discipline.
+- **`unresolvableFieldProvenance`** — a `fieldProvenance.path` that doesn't
+  actually resolve against `profile`'s real shape: a typo, or a path left
+  stale after you renamed/removed something in `profile`. Fix the path to
+  match the real structure.
 
 Re-run step 4 after each change — the whole pipeline is deterministic, so
 the same input always reproduces the same report.

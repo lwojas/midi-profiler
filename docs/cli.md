@@ -75,23 +75,37 @@ pure `buildGenerateReport`:
    `unknownEvidenceIds`.
 4. Runs every `fieldProvenance` entry through `isTraceable`, flagging
    failures as `untraceableFieldProvenance`.
+5. Walks `profile` itself (via [`src/cli/field-path.ts`](../src/cli/field-path.ts))
+   to find every leaf field with no `fieldProvenance` entry covering it,
+   flagging them as `uncoveredFields` (ECS-62) — citation *coverage*, not
+   just citation consistency. `schemaVersion` is exempt: it's a fixed
+   constant, not a fact the evidence resolved.
+6. Checks that every `fieldProvenance.path` (other than `confidence:
+   "unknown"` entries, which may legitimately name something not yet in
+   `profile` at all) actually resolves against `profile`'s real shape,
+   flagging ones that don't as `unresolvableFieldProvenance` (ECS-62) — a
+   typo, or a path left stale after a profile edit.
 
 The result is a `CliGenerateReport`: a `GenerationReport` plus
-`fieldProvenance`, `unknownEvidenceIds`, and `untraceableFieldProvenance`.
-`isCliReportReady` is true only when `isReadyForRuntime` holds **and**
-both new lists are empty — citing evidence that doesn't exist, or claiming
-a confidence with nothing (or a contradiction) behind it, is exactly the
-kind of invented-rather-than-reported fact every prior ticket already
-refuses to allow. The command's exit code is `0` exactly when the printed
-report is ready, `1` otherwise — scriptable in CI without parsing the
-report body.
+`fieldProvenance`, `unknownEvidenceIds`, `untraceableFieldProvenance`,
+`uncoveredFields`, and `unresolvableFieldProvenance`. `isCliReportReady` is
+true only when `isReadyForRuntime` holds **and** all four new lists are
+empty — citing evidence that doesn't exist, claiming a confidence with
+nothing (or a contradiction) behind it, leaving a real field uncited, or
+citing a field that isn't really there, are all the same kind of
+invented-rather-than-reported fact every prior ticket already refuses to
+allow. The command's exit code is `0` exactly when the printed report is
+ready, `1` otherwise — scriptable in CI without parsing the report body.
 
 Crucially, neither cross-check lives inside `src/generation/` or
 `src/provenance/` themselves — both docs deliberately keep those modules
 decoupled from each other (see provenance-model.md's "No cross-check
 against `GeneratedDeviceProfile.evidenceIds`"). The CLI is the caller both
 docs anticipated: it's allowed to know about all three sibling modules at
-once, precisely so neither has to know about the others.
+once, precisely so neither has to know about the others. `field-path.ts`'s
+path parsing/resolution is itself a fourth piece the CLI owns for the same
+reason: it depends only on `profile`'s runtime shape, not on either
+sibling module's types.
 
 ### `--validator <module>`
 

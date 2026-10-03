@@ -84,4 +84,74 @@ describe("buildGenerateReport", () => {
 
     expect(isCliReportReady(report)).toBe(false);
   });
+
+  it("flags a profile field with no covering fieldProvenance entry", () => {
+    const input: GenerateInput = {
+      profile: { identity: { id: "fixture" } },
+      evidenceIds: ["evidence.one"],
+    };
+
+    const report = buildGenerateReport({ input, knownEvidenceIds: KNOWN_EVIDENCE_IDS, validate: noDiagnostics });
+
+    expect(report.uncoveredFields).toEqual(["identity.id"]);
+    expect(isCliReportReady(report)).toBe(false);
+  });
+
+  it("accepts coverage from an ancestor or wildcard fieldProvenance path", () => {
+    const input: GenerateInput = {
+      profile: { controls: [{ id: "a", input: { channel: 0 } }, { id: "b", feedback: { kind: "rgb-led" } }] },
+      evidenceIds: ["evidence.one"],
+      fieldProvenance: [
+        { path: "controls", confidence: "manufacturer-documented", evidenceIds: ["evidence.one"] },
+        { path: "controls[*].input.channel", confidence: "daw-discovered", evidenceIds: ["evidence.two"] },
+      ],
+    };
+
+    const report = buildGenerateReport({ input, knownEvidenceIds: KNOWN_EVIDENCE_IDS, validate: noDiagnostics });
+
+    expect(report.uncoveredFields).toEqual([]);
+    expect(isCliReportReady(report)).toBe(true);
+  });
+
+  it("does not require fieldProvenance coverage for schemaVersion", () => {
+    const input: GenerateInput = {
+      profile: { schemaVersion: "1.0" },
+      evidenceIds: ["evidence.one"],
+    };
+
+    const report = buildGenerateReport({ input, knownEvidenceIds: KNOWN_EVIDENCE_IDS, validate: noDiagnostics });
+
+    expect(report.uncoveredFields).toEqual([]);
+    expect(isCliReportReady(report)).toBe(true);
+  });
+
+  it("flags a fieldProvenance path that doesn't resolve against profile", () => {
+    const input: GenerateInput = {
+      profile: { identity: { id: "fixture" } },
+      evidenceIds: ["evidence.one"],
+      fieldProvenance: [{ path: "idenity.id", confidence: "manufacturer-documented", evidenceIds: ["evidence.one"] }],
+    };
+
+    const report = buildGenerateReport({ input, knownEvidenceIds: KNOWN_EVIDENCE_IDS, validate: noDiagnostics });
+
+    expect(report.unresolvableFieldProvenance).toEqual(["idenity.id"]);
+    expect(isCliReportReady(report)).toBe(false);
+  });
+
+  it("does not require an unknown-confidence fieldProvenance path to resolve against profile", () => {
+    const input: GenerateInput = {
+      profile: { handshake: { required: false, steps: [] } },
+      evidenceIds: ["evidence.one"],
+      unresolved: [{ path: "handshake.sysexAuth", reason: "not documented" }],
+      fieldProvenance: [
+        { path: "handshake", confidence: "manufacturer-documented", evidenceIds: ["evidence.one"] },
+        { path: "handshake.sysexAuth", confidence: "unknown", evidenceIds: [] },
+      ],
+    };
+
+    const report = buildGenerateReport({ input, knownEvidenceIds: KNOWN_EVIDENCE_IDS, validate: noDiagnostics });
+
+    expect(report.unresolvableFieldProvenance).toEqual([]);
+    expect(isCliReportReady(report)).toBe(true);
+  });
 });
