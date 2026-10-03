@@ -71,6 +71,18 @@ evidence, and how to run the result through the CLI against `midi-core`'s
 real validator. Written in preparation for
 [ECS-47](https://linear.app/ecs3d/issue/ECS-47/create-first-real-device-profile-as-profiler-validation-exercise).
 
+## Device prober (companion app)
+
+[`prober/`](prober) is a separate, self-contained companion app: it connects
+to a real device over midi-core's live I/O, sends known CC/Note/SysEx bytes,
+and records what actually comes back, as a stronger alternative to
+manufacturer docs alone. It stays decoupled from this package's own
+dependency-free, deterministic core — see
+[`docs/device-prober.md`](docs/device-prober.md) for the architecture and
+[`prober/README.md`](prober/README.md) for how to run it. A completed probe
+session feeds back into the evidence model above as `captured-traffic`
+evidence, the same as any other research material.
+
 ## Development
 
 ```
@@ -79,3 +91,6 @@ npm test        # run the test suite (vitest)
 npm run typecheck
 npm run build    # emit dist/
 ```
+
+`prober/` has its own independent `npm install`/`npm test`/`npm run build` —
+see [`prober/README.md`](prober/README.md).
