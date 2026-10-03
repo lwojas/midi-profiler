@@ -1,0 +1,51 @@
+{
+  "id": "manual-probe",
+  "device": {
+    "manufacturer": "Novation",
+    "model": "Launchpad Mini [MK3]"
+  },
+  "startedAt": "2026-10-03T22:19:50.559Z",
+  "completedAt": "2026-10-03T22:19:51.061Z",
+  "steps": [
+    {
+      "step": {
+        "id": "step-1",
+        "description": "Raw SysEx",
+        "send": [
+          240,
+          126,
+          127,
+          6,
+          1,
+          247
+        ],
+        "listenMs": 500
+      },
+      "sentAt": "2026-10-03T22:19:50.559Z",
+      "observations": [
+        {
+          "raw": [
+            240,
+            126,
+            0,
+            6,
+            2,
+            0,
+            32,
+            41,
+            19,
+            1,
+            0,
+            0,
+            0,
+            4,
+            6,
+            7,
+            247
+          ],
+          "receivedAtMs": 4
+        }
+      ]
+    }
+  ]
+}

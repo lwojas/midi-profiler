@@ -48,6 +48,20 @@ export const EVIDENCE: readonly Evidence[] = [
       "down explicitly for plain button-press reporting.",
   },
   {
+    id: "novation.launchpad-mini-mk3.captured-traffic.manual-probe",
+    device: NOVATION_LAUNCHPAD_MINI_MK3,
+    kind: "captured-traffic",
+    source: { type: "file", path: "research/novation-launchpad-mini-mk3/captured-traffic/manual-probe.json" },
+    title: 'Novation Launchpad Mini [MK3] probe session "manual-probe" (1 step)',
+    notes:
+      "Captured via midi-prober's single-probe MVP (ECS-60) against a real, physically connected unit: sent the " +
+      "standard MIDI Universal Device Inquiry SysEx (`F0 7E 7F 06 01 F7`); the device replied in 4ms with an " +
+      "Identity Reply (`F0 7E 00 06 02 00 20 29 13 01 00 00 00 04 06 07 F7`) confirming Novation's manufacturer " +
+      "id (`00 20 29`) and the Launchpad Mini MK3 family code (`13 01` = `(19, 1)`) — matching the family code " +
+      "already on record from the Launchpad95 remote-script evidence above.",
+    collectedAt: "2026-10-03T22:19:51.061Z",
+  },
+  {
     id: "ableton.live-object-model-map",
     // No `device`: this is about how Ableton's Remote Scripts map a controller into Live in
     // general, not research about any one controller.
