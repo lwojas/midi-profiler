@@ -10,6 +10,7 @@ import type { Evidence } from "./types/evidence.js";
 
 const NOVATION_LAUNCH_CONTROL_3: DeviceReference = { manufacturer: "Novation", model: "Launch Control 3" };
 const NOVATION_LAUNCHPAD_MINI_MK3: DeviceReference = { manufacturer: "Novation", model: "Launchpad Mini [MK3]" };
+const ABLETON_PUSH_MK1: DeviceReference = { manufacturer: "Ableton", model: "Push" };
 
 export const EVIDENCE: readonly Evidence[] = [
   {
@@ -60,6 +61,88 @@ export const EVIDENCE: readonly Evidence[] = [
       "id (`00 20 29`) and the Launchpad Mini MK3 family code (`13 01` = `(19, 1)`) — matching the family code " +
       "already on record from the Launchpad95 remote-script evidence above.",
     collectedAt: "2026-10-03T22:19:51.061Z",
+  },
+  {
+    id: "ableton.push-mk1.midi-usermode-mapping",
+    device: ABLETON_PUSH_MK1,
+    kind: "implementation-chart",
+    source: { type: "file", path: "research/push-mk1/midi-usermode-mapping.md" },
+    title: "Ableton Push 1 (Mk1) User Mode MIDI reference map",
+    notes:
+      "Community-compiled implementation chart for Push 1's standalone User Mode: encoder/knob CC and touch-note " +
+      "addresses, utility/navigation/mode button CCs, the 8x8 pad matrix's note numbering, the touch strip's " +
+      "pitch-bend/tap behavior, and the pad RGB-indexed velocity-color table. No manufacturer byline or citation — " +
+      "not Ableton's own documentation, so treated as third-party pending verification, not manufacturer-documented. " +
+      "ERRATUM (round 2 of hands-on verification, see `ableton.push-mk1.verification-notes`): its labels for CC " +
+      "58/59/112/49/50/51 are wrong (looks conflated with Push 2's layout in places) — see " +
+      "`ableton.push-mk1.midi-usermode-mapping-verified` for the corrected labels. Everything outside that one " +
+      "section (encoders, arrows, touch strip, pad grid, display/upper-control rows) checked out.",
+  },
+  {
+    id: "ableton.push-mk1.midi-usermode-mapping-verified",
+    device: ABLETON_PUSH_MK1,
+    kind: "implementation-chart",
+    source: { type: "file", path: "research/push-mk1/midi-usermode-mapping-verified.md" },
+    title: "Ableton Push 1 (Mk1) User Mode MIDI map — verified",
+    notes:
+      "Supersedes the button-label claims in `ableton.push-mk1.midi-usermode-mapping`. Cross-references Julien " +
+      "Bayle's diagram (`ableton.push-mk1.julien-bayle-diagram`) against hands-on readings of the actual printed " +
+      "hardware labels, one button at a time: CC 28/29/110/111/114/115 confirmed correct (Master/Stop/Devices/" +
+      "Browse/Volume/Pan-Send); CC 49/50/51/58/59/112 corrected (really Shift/Note/Session/Scales/the hardcoded " +
+      "User-mode toggle/Track, not Mute/Solo/Record Arm/Note/Session/Clip). CC 113/116 and a block of paired " +
+      "buttons right of the pad grid (roughly CC 48-57, 60-63) are named as unresolved rather than guessed at.",
+    collectedAt: "2026-10-08",
+  },
+  {
+    id: "ableton.push-mk1.julien-bayle-diagram",
+    device: ABLETON_PUSH_MK1,
+    kind: "implementation-chart",
+    source: { type: "file", path: "research/push-mk1/AbletonPushUserModeHack.png" },
+    title: 'Julien Bayle, "What does the PUSH send in User Mode?" (unofficial)',
+    notes:
+      "A named, credited diagram (unlike the two anonymous community docs above), covering encoders (including the " +
+      "1/127 relative-encoding convention and that touch sends the encoder's note at velocity 127/0), the pad grid " +
+      "(with its own note-numbering formula, and that pads send pitch/velocity/aftertouch), the touch strip, and " +
+      "that every button sends CC 127 on press / 0 on release. Leaves several button groups unlabeled rather than " +
+      "guessing at their function (the CC 110-115 block, and a block of paired buttons right of the grid) — those " +
+      "gaps, where they overlap the original mapping doc's (wrong) claims, are what prompted the round-2 hands-on " +
+      "recheck. Matches everything independently tested for the parts it does label.",
+    collectedAt: "2026-10-08",
+  },
+  {
+    id: "ableton.push-mk1.sysex-mapping",
+    device: ABLETON_PUSH_MK1,
+    kind: "sysex-reference",
+    source: { type: "file", path: "research/push-mk1/sysex-mapping.md" },
+    title: "Ableton Push 1 (Mk1) display & global SysEx reference",
+    notes:
+      "Community-compiled SysEx reference: the 4-line, 68-char LCD text display message formula and padding rule, " +
+      "and global configuration SysEx (aftertouch pressure mode force, Live/User mode force). Same provenance caveat " +
+      "as the MIDI mapping doc above — no manufacturer byline, treated as third-party pending verification. " +
+      "Display and aftertouch-mode sections cross-checked hands-on; see `ableton.push-mk1.verification-notes`.",
+  },
+  {
+    id: "ableton.push-mk1.verification-notes",
+    device: ABLETON_PUSH_MK1,
+    kind: "experiment-note",
+    source: { type: "file", path: "research/push-mk1/verification/VERIFICATION.md" },
+    title: 'Push mk1 User Mode hands-on verification (ad hoc Node scripts, @julusian/midi)',
+    notes:
+      "Hands-on verification against a real, physically connected Push 1 in User Mode, run with ad hoc Node scripts " +
+      "(not the prober pipeline) directly against CoreMIDI's 'Ableton Push User Port'. Confirmed: Encoder 1 " +
+      "(touch note 0 / rotate CC 71), Tempo Encoder (note 10 / CC 14), Swing Encoder (note 9 / CC 15), Arrow Up " +
+      "(CC 46), Arrow Right (CC 45), Tap Tempo (CC 3), Metronome (CC 9), every other documented utility/nav/mode " +
+      "button CC (lit its button in a full sweep), the 8x8 pad matrix's bottom-left note numbering (36-38, plus " +
+      "46), the pad velocity-color table (8 colors, visually confirmed), the touch strip (pitch bend + note-12 " +
+      "tap), the LCD text display SysEx (all 4 lines, 68-char blank-padding), and the aftertouch-mode SysEx " +
+      "(pads default to Poly Pressure; the 'force mono' message switched them to Channel Pressure as documented). " +
+      "Not tested: Encoders 2-8 and the Master Encoder, the remaining ~60 pads, pad LED bright/dim/pulse " +
+      "velocities, and the Live/User mode-forcing SysEx (skipped deliberately to avoid dropping the User Port " +
+      "mid-session). No contradictions found between the two mapping docs and actual hardware behavior. ROUND 2 " +
+      "(same day, prompted by a live hardware check surfacing a wrong label): read the actual printed label off " +
+      "12 buttons the original mapping doc claimed, one at a time (light it, ask what's printed) — see " +
+      "`ableton.push-mk1.midi-usermode-mapping-verified` for the full corrected table.",
+    collectedAt: "2026-10-08",
   },
   {
     id: "ableton.live-object-model-map",

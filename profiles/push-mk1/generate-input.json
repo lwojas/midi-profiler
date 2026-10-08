@@ -1,0 +1,3637 @@
+{
+  "profile": {
+    "schemaVersion": "1.0",
+    "identity": {
+      "id": "ableton.push-mk1",
+      "manufacturer": "Ableton",
+      "model": "Push"
+    },
+    "ports": [
+      {
+        "id": "user-port-in",
+        "type": "input",
+        "role": "main",
+        "required": true,
+        "messageTypes": [
+          "note-on",
+          "note-off",
+          "control-change",
+          "poly-pressure",
+          "channel-pressure",
+          "pitch-bend",
+          "sysex"
+        ]
+      },
+      {
+        "id": "user-port-out",
+        "type": "output",
+        "role": "main",
+        "required": true,
+        "messageTypes": [
+          "note-on",
+          "note-off",
+          "control-change",
+          "sysex"
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "id": "encoder-1",
+        "label": "Encoder 1 (leftmost) (CC 71, relative turn)",
+        "kind": "encoder",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 71
+          },
+          "channel": 0
+        },
+        "valueMode": "relative"
+      },
+      {
+        "id": "encoder-1-touch",
+        "label": "Encoder 1 (leftmost) touch (Note 0)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 0
+          },
+          "channel": 0
+        }
+      },
+      {
+        "id": "encoder-2",
+        "label": "Encoder 2 (CC 72, relative turn)",
+        "kind": "encoder",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 72
+          },
+          "channel": 0
+        },
+        "valueMode": "relative"
+      },
+      {
+        "id": "encoder-2-touch",
+        "label": "Encoder 2 touch (Note 1)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 1
+          },
+          "channel": 0
+        }
+      },
+      {
+        "id": "encoder-3",
+        "label": "Encoder 3 (CC 73, relative turn)",
+        "kind": "encoder",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 73
+          },
+          "channel": 0
+        },
+        "valueMode": "relative"
+      },
+      {
+        "id": "encoder-3-touch",
+        "label": "Encoder 3 touch (Note 2)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 2
+          },
+          "channel": 0
+        }
+      },
+      {
+        "id": "encoder-4",
+        "label": "Encoder 4 (CC 74, relative turn)",
+        "kind": "encoder",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 74
+          },
+          "channel": 0
+        },
+        "valueMode": "relative"
+      },
+      {
+        "id": "encoder-4-touch",
+        "label": "Encoder 4 touch (Note 3)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 3
+          },
+          "channel": 0
+        }
+      },
+      {
+        "id": "encoder-5",
+        "label": "Encoder 5 (CC 75, relative turn)",
+        "kind": "encoder",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 75
+          },
+          "channel": 0
+        },
+        "valueMode": "relative"
+      },
+      {
+        "id": "encoder-5-touch",
+        "label": "Encoder 5 touch (Note 4)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 4
+          },
+          "channel": 0
+        }
+      },
+      {
+        "id": "encoder-6",
+        "label": "Encoder 6 (CC 76, relative turn)",
+        "kind": "encoder",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 76
+          },
+          "channel": 0
+        },
+        "valueMode": "relative"
+      },
+      {
+        "id": "encoder-6-touch",
+        "label": "Encoder 6 touch (Note 5)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 5
+          },
+          "channel": 0
+        }
+      },
+      {
+        "id": "encoder-7",
+        "label": "Encoder 7 (CC 77, relative turn)",
+        "kind": "encoder",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 77
+          },
+          "channel": 0
+        },
+        "valueMode": "relative"
+      },
+      {
+        "id": "encoder-7-touch",
+        "label": "Encoder 7 touch (Note 6)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 6
+          },
+          "channel": 0
+        }
+      },
+      {
+        "id": "encoder-8",
+        "label": "Encoder 8 (CC 78, relative turn)",
+        "kind": "encoder",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 78
+          },
+          "channel": 0
+        },
+        "valueMode": "relative"
+      },
+      {
+        "id": "encoder-8-touch",
+        "label": "Encoder 8 touch (Note 7)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 7
+          },
+          "channel": 0
+        }
+      },
+      {
+        "id": "encoder-master",
+        "label": "Master Encoder (rightmost) (CC 79, relative turn)",
+        "kind": "encoder",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 79
+          },
+          "channel": 0
+        },
+        "valueMode": "relative"
+      },
+      {
+        "id": "encoder-master-touch",
+        "label": "Master Encoder (rightmost) touch (Note 8)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 8
+          },
+          "channel": 0
+        }
+      },
+      {
+        "id": "encoder-swing",
+        "label": "Swing Encoder (CC 15, relative turn)",
+        "kind": "encoder",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 15
+          },
+          "channel": 0
+        },
+        "valueMode": "relative"
+      },
+      {
+        "id": "encoder-swing-touch",
+        "label": "Swing Encoder touch (Note 9)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 9
+          },
+          "channel": 0
+        }
+      },
+      {
+        "id": "encoder-tempo",
+        "label": "Tempo Encoder (CC 14, relative turn)",
+        "kind": "encoder",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 14
+          },
+          "channel": 0
+        },
+        "valueMode": "relative"
+      },
+      {
+        "id": "encoder-tempo-touch",
+        "label": "Tempo Encoder touch (Note 10)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 10
+          },
+          "channel": 0
+        }
+      },
+      {
+        "id": "touch-strip",
+        "label": "Touch strip (pitch bend)",
+        "kind": "wheel",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "pitch-bend"
+          },
+          "channel": 0
+        }
+      },
+      {
+        "id": "touch-strip-tap",
+        "label": "Touch strip tap (Note 12)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 12
+          },
+          "channel": 0
+        }
+      },
+      {
+        "id": "pad-36",
+        "label": "Pad (note 36)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 36
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 36
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-37",
+        "label": "Pad (note 37)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 37
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 37
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-38",
+        "label": "Pad (note 38)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 38
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 38
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-39",
+        "label": "Pad (note 39)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 39
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 39
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-40",
+        "label": "Pad (note 40)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 40
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 40
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-41",
+        "label": "Pad (note 41)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 41
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 41
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-42",
+        "label": "Pad (note 42)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 42
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 42
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-43",
+        "label": "Pad (note 43)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 43
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 43
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-44",
+        "label": "Pad (note 44)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 44
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 44
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-45",
+        "label": "Pad (note 45)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 45
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 45
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-46",
+        "label": "Pad (note 46)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 46
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 46
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-47",
+        "label": "Pad (note 47)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 47
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 47
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-48",
+        "label": "Pad (note 48)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 48
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 48
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-49",
+        "label": "Pad (note 49)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 49
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 49
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-50",
+        "label": "Pad (note 50)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 50
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 50
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-51",
+        "label": "Pad (note 51)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 51
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 51
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-52",
+        "label": "Pad (note 52)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 52
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 52
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-53",
+        "label": "Pad (note 53)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 53
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 53
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-54",
+        "label": "Pad (note 54)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 54
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 54
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-55",
+        "label": "Pad (note 55)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 55
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 55
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-56",
+        "label": "Pad (note 56)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 56
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 56
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-57",
+        "label": "Pad (note 57)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 57
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 57
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-58",
+        "label": "Pad (note 58)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 58
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 58
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-59",
+        "label": "Pad (note 59)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 59
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 59
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-60",
+        "label": "Pad (note 60)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 60
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 60
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-61",
+        "label": "Pad (note 61)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 61
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 61
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-62",
+        "label": "Pad (note 62)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 62
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 62
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-63",
+        "label": "Pad (note 63)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 63
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 63
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-64",
+        "label": "Pad (note 64)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 64
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 64
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-65",
+        "label": "Pad (note 65)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 65
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 65
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-66",
+        "label": "Pad (note 66)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 66
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 66
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-67",
+        "label": "Pad (note 67)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 67
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 67
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-68",
+        "label": "Pad (note 68)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 68
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 68
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-69",
+        "label": "Pad (note 69)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 69
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 69
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-70",
+        "label": "Pad (note 70)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 70
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 70
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-71",
+        "label": "Pad (note 71)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 71
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 71
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-72",
+        "label": "Pad (note 72)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 72
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 72
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-73",
+        "label": "Pad (note 73)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 73
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 73
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-74",
+        "label": "Pad (note 74)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 74
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 74
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-75",
+        "label": "Pad (note 75)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 75
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 75
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-76",
+        "label": "Pad (note 76)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 76
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 76
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-77",
+        "label": "Pad (note 77)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 77
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 77
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-78",
+        "label": "Pad (note 78)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 78
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 78
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-79",
+        "label": "Pad (note 79)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 79
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 79
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-80",
+        "label": "Pad (note 80)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 80
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 80
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-81",
+        "label": "Pad (note 81)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 81
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 81
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-82",
+        "label": "Pad (note 82)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 82
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 82
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-83",
+        "label": "Pad (note 83)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 83
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 83
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-84",
+        "label": "Pad (note 84)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 84
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 84
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-85",
+        "label": "Pad (note 85)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 85
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 85
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-86",
+        "label": "Pad (note 86)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 86
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 86
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-87",
+        "label": "Pad (note 87)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 87
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 87
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-88",
+        "label": "Pad (note 88)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 88
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 88
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-89",
+        "label": "Pad (note 89)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 89
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 89
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-90",
+        "label": "Pad (note 90)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 90
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 90
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-91",
+        "label": "Pad (note 91)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 91
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 91
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-92",
+        "label": "Pad (note 92)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 92
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 92
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-93",
+        "label": "Pad (note 93)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 93
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 93
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-94",
+        "label": "Pad (note 94)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 94
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 94
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-95",
+        "label": "Pad (note 95)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 95
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 95
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-96",
+        "label": "Pad (note 96)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 96
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 96
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-97",
+        "label": "Pad (note 97)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 97
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 97
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-98",
+        "label": "Pad (note 98)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 98
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 98
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "pad-99",
+        "label": "Pad (note 99)",
+        "kind": "pad",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "note",
+            "note": 99
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "velocity-color-led",
+          "address": {
+            "address": {
+              "type": "note",
+              "note": 99
+            },
+            "channel": 0
+          },
+          "paletteSize": 128
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-display-1",
+        "label": "Display row button 1 (above screen, leftmost) (CC 20)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 20
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 20
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-display-2",
+        "label": "Display row button 2 (CC 21)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 21
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 21
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-display-3",
+        "label": "Display row button 3 (CC 22)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 22
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 22
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-display-4",
+        "label": "Display row button 4 (CC 23)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 23
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 23
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-display-5",
+        "label": "Display row button 5 (CC 24)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 24
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 24
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-display-6",
+        "label": "Display row button 6 (CC 25)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 25
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 25
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-display-7",
+        "label": "Display row button 7 (CC 26)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 26
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 26
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-display-8",
+        "label": "Display row button 8 (above screen, rightmost) (CC 27)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 27
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 27
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-upper-1",
+        "label": "Upper control row button 1 (leftmost) (CC 102)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 102
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 102
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-upper-2",
+        "label": "Upper control row button 2 (CC 103)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 103
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 103
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-upper-3",
+        "label": "Upper control row button 3 (CC 104)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 104
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 104
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-upper-4",
+        "label": "Upper control row button 4 (CC 105)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 105
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 105
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-upper-5",
+        "label": "Upper control row button 5 (CC 106)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 106
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 106
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-upper-6",
+        "label": "Upper control row button 6 (CC 107)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 107
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 107
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-upper-7",
+        "label": "Upper control row button 7 (CC 108)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 108
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 108
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-upper-8",
+        "label": "Upper control row button 8 (rightmost) (CC 109)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 109
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 109
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-tap-tempo",
+        "label": "Tap Tempo (CC 3)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 3
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 3
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-metronome",
+        "label": "Metronome (CC 9)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 9
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 9
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-master",
+        "label": "Master (CC 28)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 28
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 28
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-stop-clip",
+        "label": "Stop (CC 29)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 29
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 29
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-shift",
+        "label": "Shift (CC 49)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 49
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 49
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-note",
+        "label": "Note (CC 50)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 50
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 50
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-session",
+        "label": "Session (CC 51)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 51
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 51
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-arrow-up",
+        "label": "Arrow Up (CC 46)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 46
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 46
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-arrow-down",
+        "label": "Arrow Down (CC 47)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 47
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 47
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-arrow-left",
+        "label": "Arrow Left (CC 44)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 44
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 44
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-arrow-right",
+        "label": "Arrow Right (CC 45)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 45
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 45
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-select",
+        "label": "Select (CC 34)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 34
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 34
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-shift-nav",
+        "label": "Shift (CC 35)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 35
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 35
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-play",
+        "label": "Play (CC 85)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 85
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 85
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-record",
+        "label": "Record (CC 86)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 86
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 86
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-new",
+        "label": "New (CC 87)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 87
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 87
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-duplicate",
+        "label": "Duplicate (CC 88)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 88
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 88
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-automation",
+        "label": "Automation (CC 89)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 89
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 89
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-fixed-length",
+        "label": "Fixed Length (CC 90)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 90
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 90
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-volume",
+        "label": "Volume (CC 114)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 114
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 114
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-pan-send",
+        "label": "Pan / Send (CC 115)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 115
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 115
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-devices",
+        "label": "Devices (CC 110)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 110
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 110
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-browse",
+        "label": "Browse (CC 111)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 111
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 111
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-track",
+        "label": "Track (CC 112)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 112
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 112
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      },
+      {
+        "id": "button-scales",
+        "label": "Scales (CC 58)",
+        "kind": "button",
+        "portId": "user-port-in",
+        "input": {
+          "address": {
+            "type": "control-change",
+            "controller": 58
+          },
+          "channel": 0
+        },
+        "feedback": {
+          "kind": "monochrome-led",
+          "address": {
+            "address": {
+              "type": "control-change",
+              "controller": 58
+            },
+            "channel": 0
+          }
+        },
+        "feedbackPortId": "user-port-out"
+      }
+    ],
+    "grids": [
+      {
+        "id": "pads",
+        "label": "8x8 pad grid",
+        "rows": 8,
+        "columns": 8,
+        "cells": [
+          {
+            "row": 7,
+            "column": 0,
+            "controlId": "pad-36"
+          },
+          {
+            "row": 7,
+            "column": 1,
+            "controlId": "pad-37"
+          },
+          {
+            "row": 7,
+            "column": 2,
+            "controlId": "pad-38"
+          },
+          {
+            "row": 7,
+            "column": 3,
+            "controlId": "pad-39"
+          },
+          {
+            "row": 7,
+            "column": 4,
+            "controlId": "pad-40"
+          },
+          {
+            "row": 7,
+            "column": 5,
+            "controlId": "pad-41"
+          },
+          {
+            "row": 7,
+            "column": 6,
+            "controlId": "pad-42"
+          },
+          {
+            "row": 7,
+            "column": 7,
+            "controlId": "pad-43"
+          },
+          {
+            "row": 6,
+            "column": 0,
+            "controlId": "pad-44"
+          },
+          {
+            "row": 6,
+            "column": 1,
+            "controlId": "pad-45"
+          },
+          {
+            "row": 6,
+            "column": 2,
+            "controlId": "pad-46"
+          },
+          {
+            "row": 6,
+            "column": 3,
+            "controlId": "pad-47"
+          },
+          {
+            "row": 6,
+            "column": 4,
+            "controlId": "pad-48"
+          },
+          {
+            "row": 6,
+            "column": 5,
+            "controlId": "pad-49"
+          },
+          {
+            "row": 6,
+            "column": 6,
+            "controlId": "pad-50"
+          },
+          {
+            "row": 6,
+            "column": 7,
+            "controlId": "pad-51"
+          },
+          {
+            "row": 5,
+            "column": 0,
+            "controlId": "pad-52"
+          },
+          {
+            "row": 5,
+            "column": 1,
+            "controlId": "pad-53"
+          },
+          {
+            "row": 5,
+            "column": 2,
+            "controlId": "pad-54"
+          },
+          {
+            "row": 5,
+            "column": 3,
+            "controlId": "pad-55"
+          },
+          {
+            "row": 5,
+            "column": 4,
+            "controlId": "pad-56"
+          },
+          {
+            "row": 5,
+            "column": 5,
+            "controlId": "pad-57"
+          },
+          {
+            "row": 5,
+            "column": 6,
+            "controlId": "pad-58"
+          },
+          {
+            "row": 5,
+            "column": 7,
+            "controlId": "pad-59"
+          },
+          {
+            "row": 4,
+            "column": 0,
+            "controlId": "pad-60"
+          },
+          {
+            "row": 4,
+            "column": 1,
+            "controlId": "pad-61"
+          },
+          {
+            "row": 4,
+            "column": 2,
+            "controlId": "pad-62"
+          },
+          {
+            "row": 4,
+            "column": 3,
+            "controlId": "pad-63"
+          },
+          {
+            "row": 4,
+            "column": 4,
+            "controlId": "pad-64"
+          },
+          {
+            "row": 4,
+            "column": 5,
+            "controlId": "pad-65"
+          },
+          {
+            "row": 4,
+            "column": 6,
+            "controlId": "pad-66"
+          },
+          {
+            "row": 4,
+            "column": 7,
+            "controlId": "pad-67"
+          },
+          {
+            "row": 3,
+            "column": 0,
+            "controlId": "pad-68"
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "controlId": "pad-69"
+          },
+          {
+            "row": 3,
+            "column": 2,
+            "controlId": "pad-70"
+          },
+          {
+            "row": 3,
+            "column": 3,
+            "controlId": "pad-71"
+          },
+          {
+            "row": 3,
+            "column": 4,
+            "controlId": "pad-72"
+          },
+          {
+            "row": 3,
+            "column": 5,
+            "controlId": "pad-73"
+          },
+          {
+            "row": 3,
+            "column": 6,
+            "controlId": "pad-74"
+          },
+          {
+            "row": 3,
+            "column": 7,
+            "controlId": "pad-75"
+          },
+          {
+            "row": 2,
+            "column": 0,
+            "controlId": "pad-76"
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "controlId": "pad-77"
+          },
+          {
+            "row": 2,
+            "column": 2,
+            "controlId": "pad-78"
+          },
+          {
+            "row": 2,
+            "column": 3,
+            "controlId": "pad-79"
+          },
+          {
+            "row": 2,
+            "column": 4,
+            "controlId": "pad-80"
+          },
+          {
+            "row": 2,
+            "column": 5,
+            "controlId": "pad-81"
+          },
+          {
+            "row": 2,
+            "column": 6,
+            "controlId": "pad-82"
+          },
+          {
+            "row": 2,
+            "column": 7,
+            "controlId": "pad-83"
+          },
+          {
+            "row": 1,
+            "column": 0,
+            "controlId": "pad-84"
+          },
+          {
+            "row": 1,
+            "column": 1,
+            "controlId": "pad-85"
+          },
+          {
+            "row": 1,
+            "column": 2,
+            "controlId": "pad-86"
+          },
+          {
+            "row": 1,
+            "column": 3,
+            "controlId": "pad-87"
+          },
+          {
+            "row": 1,
+            "column": 4,
+            "controlId": "pad-88"
+          },
+          {
+            "row": 1,
+            "column": 5,
+            "controlId": "pad-89"
+          },
+          {
+            "row": 1,
+            "column": 6,
+            "controlId": "pad-90"
+          },
+          {
+            "row": 1,
+            "column": 7,
+            "controlId": "pad-91"
+          },
+          {
+            "row": 0,
+            "column": 0,
+            "controlId": "pad-92"
+          },
+          {
+            "row": 0,
+            "column": 1,
+            "controlId": "pad-93"
+          },
+          {
+            "row": 0,
+            "column": 2,
+            "controlId": "pad-94"
+          },
+          {
+            "row": 0,
+            "column": 3,
+            "controlId": "pad-95"
+          },
+          {
+            "row": 0,
+            "column": 4,
+            "controlId": "pad-96"
+          },
+          {
+            "row": 0,
+            "column": 5,
+            "controlId": "pad-97"
+          },
+          {
+            "row": 0,
+            "column": 6,
+            "controlId": "pad-98"
+          },
+          {
+            "row": 0,
+            "column": 7,
+            "controlId": "pad-99"
+          }
+        ],
+        "paging": {
+          "rows": 8,
+          "columns": 8
+        }
+      }
+    ],
+    "sysex": {
+      "manufacturerId": [
+        71,
+        127
+      ],
+      "required": false,
+      "notes": "Vendor SysEx (F0 47 7F 15 ...) is used for the LCD text display and global configuration (aftertouch mode, Live/User mode force). Normal pad/button/encoder operation in User Mode doesn't depend on it; the LCD is the only feedback that has no Note/CC alternative."
+    }
+  },
+  "evidenceIds": [
+    "ableton.push-mk1.midi-usermode-mapping",
+    "ableton.push-mk1.sysex-mapping",
+    "ableton.push-mk1.verification-notes",
+    "ableton.push-mk1.midi-usermode-mapping-verified",
+    "ableton.push-mk1.julien-bayle-diagram"
+  ],
+  "unresolved": [
+    {
+      "path": "ports (Live Port protocol)",
+      "reason": "The device exposes a second port pair, 'Ableton Push Live Port', used for Ableton's own internal Live control-surface protocol. Neither mapping doc covers it, and it's out of scope for a User Mode profile, so it isn't modeled as a DevicePortProfile at all here."
+    },
+    {
+      "path": "setup / handshake (no Device Inquiry reply observed)",
+      "reason": "Unlike the Launchpad, Push 1's User Port was not tested against a standard MIDI Universal Device Inquiry (F0 7E 7F 06 01 F7); neither mapping doc documents one, and sending one wasn't part of this verification pass. No handshake/setup is recorded in this profile; the device's identity above comes from its CoreMIDI port name, not a protocol-level reply."
+    },
+    {
+      "path": "controls (pad aftertouch)",
+      "reason": "Every pad also sends Poly Pressure (0xAn) by default, or Channel Pressure (0xDn) after the aftertouch-mode SysEx -- confirmed hands-on -- but PhysicalControl models one input address per control, so this second, mode-dependent input signal on the same physical pad has nowhere to go in this schema. Not represented."
+    },
+    {
+      "path": "controls (pad LED bright/dim/pulse velocities)",
+      "reason": "The mapping doc's color table (section 5) gives three velocity values per color (bright/standard/dim- or pulse-animated); only the 'standard' column was sent and visually confirmed. PhysicalControl.feedback models one representative address per control (paletteSize 128), the same simplification the Launchpad profile already made for its own multi-mode color feedback -- the other two columns aren't separately modeled."
+    },
+    {
+      "path": "controls (User button, CC 59)",
+      "reason": "The mapping doc calls the physical User button 'hardcoded, unmappable' -- it switches the whole device between Live and User mode rather than reporting a note/CC -- and, separately and without realizing it was the same control, also (wrongly) labeled this exact CC 'Session' (round 2: lighting CC 59 showed 'User' printed on it). Not modeled as a PhysicalControl; its press itself was not independently tested (pressing it would have dropped the User Port mid-session), only its LED/label."
+    },
+    {
+      "path": "controls (CC 34/35, Select/Shift)",
+      "reason": "Round 2 only re-checked the specific buttons the original doc got wrong in its 'Bottom & Layout Selection Blocks'/'Right Column' sections; CC 34/35 ('Select'/'Shift') are from a different section of the same doc and weren't individually re-read off the hardware. Given that doc's now-demonstrated unreliability nearby, and that CC 49 is independently confirmed 'Shift' too (both can't be right), treat both labels as unconfirmed."
+    },
+    {
+      "path": "controls (CC 113, CC 116, and an unlabeled block right of the pad grid)",
+      "reason": "Julien Bayle's diagram shows CC 113 as a real button (part of the Devices/Browse/Track/Volume/Pan-Send block) and a block of paired buttons right of the pad grid (roughly CC 48-57, 60-63), neither labeled in the diagram. The original mapping doc's CC 116 'Track' claim is now known wrong (the real Track is CC 112) and its function is unknown. None of these were tested; the real Mute/Solo/Clip-equivalent buttons the original doc misplaced at CC 49/50/112 likely live somewhere in this unlabeled block, unconfirmed."
+    },
+    {
+      "path": "sysex (Live/User mode-forcing messages)",
+      "reason": "The mapping doc documents SysEx to force Live or User mode outright (F0 47 7F 15 62 00 01 {00|01} F7). Not sent during verification, deliberately -- forcing Live mode would have dropped the User Port mid-session with no easy way back without touching the physical hardware."
+    }
+  ],
+  "fieldProvenance": [
+    {
+      "path": "controls[0]",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Encoder 1: turning it produced CC 71 (values climbing to 127, dropping to 1 at the opposite end); touching it produced Note 0 on/off. Matches the mapping doc exactly."
+    },
+    {
+      "path": "controls[1]",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Encoder 1's touch note (0), observed alongside its CC 71 rotation. See controls[0]'s note."
+    },
+    {
+      "path": "controls",
+      "confidence": "inferred",
+      "evidenceIds": [
+        "ableton.push-mk1.midi-usermode-mapping",
+        "ableton.push-mk1.verification-notes"
+      ],
+      "notes": "Baseline confidence for every control in this document: stated outright in the community mapping/SysEx reference docs (no manufacturer byline, so not 'manufacturer-documented'), and reasoned to hold from the sequential CC/note numbering already confirmed to hold at both ends and in the middle of the same arithmetic sequences (Encoder 1 = CC 71/note 0, Swing = CC 15/note 9, Tempo = CC 14/note 10 all independently verified; Encoders 2-8 and the Master Encoder follow the same +1 sequence between them). More specific entries below override this with 'experimentally-verified' wherever hands-on testing actually confirmed that control."
+    },
+    {
+      "path": "controls[22]",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Swiping the touch strip produced a long run of 14-bit Pitch Bend messages, centering back to 8192 on release."
+    },
+    {
+      "path": "controls[23]",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Tapping the touch strip produced Note On/Off on Note 12, alongside the pitch bend stream."
+    },
+    {
+      "path": "controls[24]",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Note 36: observed as Note On/Off from a real pad press, consistent with the bottom-left-origin row-major grid."
+    },
+    {
+      "path": "controls[25]",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Note 37: observed as Note On/Off from a real pad press, consistent with the bottom-left-origin row-major grid."
+    },
+    {
+      "path": "controls[26]",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Note 38: observed as Note On/Off from a real pad press, consistent with the bottom-left-origin row-major grid."
+    },
+    {
+      "path": "controls[34]",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Note 46: observed as Note On/Off from a real pad press, consistent with the bottom-left-origin row-major grid."
+    },
+    {
+      "path": "controls[27].feedback",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Note 39: lit with its documented 'standard velocity' color from the velocity-color table; visually confirmed correct color, left to right."
+    },
+    {
+      "path": "controls[28].feedback",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Note 40: lit with its documented 'standard velocity' color from the velocity-color table; visually confirmed correct color, left to right."
+    },
+    {
+      "path": "controls[29].feedback",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Note 41: lit with its documented 'standard velocity' color from the velocity-color table; visually confirmed correct color, left to right."
+    },
+    {
+      "path": "controls[30].feedback",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Note 42: lit with its documented 'standard velocity' color from the velocity-color table; visually confirmed correct color, left to right."
+    },
+    {
+      "path": "controls[31].feedback",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Note 43: lit with its documented 'standard velocity' color from the velocity-color table; visually confirmed correct color, left to right."
+    },
+    {
+      "path": "controls[88]",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "Every utility/navigation/mode-select button's CC (this control through the last of this group) was flashed individually, in order, value 127 then 0, in a full visual sweep: each lit *a* button and went dark -- that sweep confirms the CC is real and LED-addressable, not that the doc's printed *label* for it is correct (it mostly wasn't, for this device's 'Bottom & Layout Selection Blocks'/'Right Column' CCs -- see round 2, below, and the per-control overrides it adds). Tap Tempo, Metronome, Arrow Up and Arrow Right were additionally confirmed as *input*: pressing the physical button produced exactly the documented CC."
+    },
+    {
+      "path": "controls[104].input",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "CC 3: pressing the physical button produced this exact CC with value 127 (press) / 0 (release)."
+    },
+    {
+      "path": "controls[105].input",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "CC 9: pressing the physical button produced this exact CC with value 127 (press) / 0 (release)."
+    },
+    {
+      "path": "controls[111].input",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "CC 46: pressing the physical button produced this exact CC with value 127 (press) / 0 (release)."
+    },
+    {
+      "path": "controls[114].input",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping"
+      ],
+      "notes": "CC 45: pressing the physical button produced this exact CC with value 127 (press) / 0 (release)."
+    },
+    {
+      "path": "controls[106].label",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping-verified"
+      ],
+      "notes": "CC 28: round 2 confirmed \"Master\" is actually printed on the physical button, matching the original doc's claim."
+    },
+    {
+      "path": "controls[107].label",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping-verified"
+      ],
+      "notes": "CC 29: round 2 found the original mapping doc's label was wrong here; read \"Stop\" directly off the physical button and relabeled it."
+    },
+    {
+      "path": "controls[108].label",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping-verified"
+      ],
+      "notes": "CC 49: round 2 found the original mapping doc's label was wrong here; read \"Shift\" directly off the physical button and relabeled it."
+    },
+    {
+      "path": "controls[109].label",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping-verified"
+      ],
+      "notes": "CC 50: round 2 found the original mapping doc's label was wrong here; read \"Note\" directly off the physical button and relabeled it."
+    },
+    {
+      "path": "controls[110].label",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping-verified"
+      ],
+      "notes": "CC 51: round 2 found the original mapping doc's label was wrong here; read \"Session\" directly off the physical button and relabeled it."
+    },
+    {
+      "path": "controls[123].label",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping-verified"
+      ],
+      "notes": "CC 114: round 2 confirmed \"Volume\" is actually printed on the physical button, matching the original doc's claim."
+    },
+    {
+      "path": "controls[124].label",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping-verified"
+      ],
+      "notes": "CC 115: round 2 confirmed \"Pan / Send\" is actually printed on the physical button, matching the original doc's claim."
+    },
+    {
+      "path": "controls[125].label",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping-verified"
+      ],
+      "notes": "CC 110: round 2 found the original mapping doc's label was wrong here; read \"Devices\" directly off the physical button and relabeled it."
+    },
+    {
+      "path": "controls[126].label",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping-verified"
+      ],
+      "notes": "CC 111: round 2 confirmed \"Browse\" is actually printed on the physical button, matching the original doc's claim."
+    },
+    {
+      "path": "controls[127].label",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping-verified"
+      ],
+      "notes": "CC 112: round 2 found the original mapping doc's label was wrong here; read \"Track\" directly off the physical button and relabeled it."
+    },
+    {
+      "path": "controls[128].label",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.midi-usermode-mapping-verified"
+      ],
+      "notes": "CC 58: round 2 found the original mapping doc's label was wrong here; read \"Scales\" directly off the physical button and relabeled it."
+    },
+    {
+      "path": "identity",
+      "confidence": "inferred",
+      "evidenceIds": [
+        "ableton.push-mk1.midi-usermode-mapping",
+        "ableton.push-mk1.verification-notes"
+      ],
+      "notes": "Manufacturer/model aren't stated by either mapping doc (no manufacturer byline at all). Taken from the device's own CoreMIDI port names observed during verification ('Ableton Push Live Port' / 'Ableton Push User Port'), which is how the connected hardware actually identifies itself to the host OS -- not a SysEx Device Inquiry reply (Push 1 User Mode was not observed to answer one; see unresolved)."
+    },
+    {
+      "path": "ports",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes"
+      ],
+      "notes": "Confirmed directly: the device exposes exactly two duplex CoreMIDI ports, 'Ableton Push Live Port' and 'Ableton Push User Port'. Every verification test below ran against the User Port with the hardware in User Mode (physical User button held). The Live Port's own protocol (Ableton's internal Live-control surface scheme) was not investigated -- out of scope for User Mode profiling -- so only the User Port is modeled here."
+    },
+    {
+      "path": "grids[0]",
+      "confidence": "inferred",
+      "evidenceIds": [
+        "ableton.push-mk1.midi-usermode-mapping",
+        "ableton.push-mk1.verification-notes"
+      ],
+      "notes": "The mapping doc's ASCII grid (section 3) states the full 8x8, bottom-left-origin, row-major note layout (notes 36-99). Only 4 of 64 pads were pressed directly (36, 37, 38, 46); the rest follow the same confirmed arithmetic pattern, not independently tested pad-by-pad."
+    },
+    {
+      "path": "sysex",
+      "confidence": "experimentally-verified",
+      "evidenceIds": [
+        "ableton.push-mk1.verification-notes",
+        "ableton.push-mk1.sysex-mapping"
+      ],
+      "notes": "Manufacturer id bytes (47 7F) and the LCD display message formula (F0 47 7F 15 {lineId} 00 45 00 [68 chars] F7) confirmed by sending real text to all 4 lines and visually reading it off the hardware. The aftertouch mode-force message (F0 47 7F 15 5C 00 01 {00|01} F7) also confirmed: it switched pad pressure between Poly and Channel Pressure as documented."
+    }
+  ]
+}

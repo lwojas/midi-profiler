@@ -1,0 +1,10 @@
+{
+  "name": "push-mk1-verification-scripts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Ad hoc Node scripts used to experimentally verify research/push-mk1's MIDI and SysEx mapping docs against real Push mk1 hardware. Not part of the midi-profiler/prober pipeline.",
+  "dependencies": {
+    "@julusian/midi": "^3.8.1"
+  }
+}
